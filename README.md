@@ -29,3 +29,12 @@ Each flashcard pack uses a simple, standardised XML structure:
 - **front**: Question or prompt text
 - **back**: Answer or explanation
 - **reference**: Optional source citation or additional context
+
+---
+
+## Contact
+If you want to contact me:
+- **LinkedIn:** [jameslunardi](https://www.linkedin.com/in/jameslunardi/)
+
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
