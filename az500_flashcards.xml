@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flashcards>
+    <deck title="AZ-500 Identity and Access Security" description="Flashcards based on the AZ-500 Manage security controls for identity and access module">
+        
+        <!-- Microsoft Entra ID Licensing Cards -->
+        <card id="1" category="licensing">
+            <front>What license is required for Microsoft Entra ID Protection risk policies and full security reports?</front>
+            <back>Microsoft Entra ID P2 licenses</back>
+            <reference>AZ-500 Module: License requirements section - Microsoft Entra ID Protection</reference>
+        </card>
+        
+        <card id="2" category="licensing">
+            <front>What Identity Protection features are available with Microsoft Entra ID P1 vs P2?</front>
+            <back>P1: Limited information - only users with medium and high risk shown, no details drawer or risk history. P2: Full access to all reports, risk policies, notifications, weekly digest, MFA registration policy</back>
+            <reference>AZ-500 Module: License requirements table - Microsoft Entra ID Protection</reference>
+        </card>
+        
+        <card id="3" category="licensing">
+            <front>What are the three Microsoft Entra ID license tiers and their key features?</front>
+            <back>Free: Basic user/group management, SSO. P1: Hybrid features, dynamic groups, self-service. P2: Identity Protection and Privileged Identity Management</back>
+            <reference>AZ-500 Module: Which features work in Microsoft Entra ID section</reference>
+        </card>
+        
+        <!-- Conditional Access Cards -->
+        <card id="4" category="conditional-access">
+            <front>When are Conditional Access policies enforced in the authentication process?</front>
+            <back>After first-factor authentication is completed. Conditional Access is not intended as an organization's first line of defense</back>
+            <reference>AZ-500 Module: Conditional Access - Common signals section</reference>
+        </card>
+        
+        <card id="5" category="conditional-access">
+            <front>What are the common signals that Conditional Access uses to make policy decisions?</front>
+            <back>User or group membership, IP location information, device state, application being accessed, real-time risk detection, Microsoft Defender for Cloud Apps signals</back>
+            <reference>AZ-500 Module: Conditional Access - Common signals section</reference>
+        </card>
+        
+        <card id="6" category="conditional-access">
+            <front>What are the two main decision types for Conditional Access policies?</front>
+            <back>Block access (most restrictive) or Grant access (with options like require MFA, compliant device, Hybrid Entra joined device, approved client app)</back>
+            <reference>AZ-500 Module: Conditional Access - Common decisions section</reference>
+        </card>
+        
+        <!-- Identity Protection Cards -->
+        <card id="7" category="identity-protection">
+            <front>What are the three key reports that Microsoft Entra Identity Protection provides?</front>
+            <back>1) Risk detections - each risk detected, 2) Risky sign-ins - sign-ins with risk detections, 3) Risky users - users with risky sign-ins or risk detections</back>
+            <reference>AZ-500 Module: Implement Microsoft Entra Identity Protection - Investigate section</reference>
+        </card>
+        
+        <card id="8" category="identity-protection">
+            <front>When is a user marked as 'Risky' in Identity Protection?</front>
+            <back>When either or both are true: The user has one or more risky sign-ins, OR one or more risk detections have been reported</back>
+            <reference>AZ-500 Module: Implement Microsoft Entra Identity Protection - Investigate section</reference>
+        </card>
+        
+        <card id="9" category="identity-protection">
+            <front>What risky behaviors does Identity Protection detect based on Microsoft's signal analysis?</front>
+            <back>Anonymous IP address usage, Password spray attacks, Leaked credentials</back>
+            <reference>AZ-500 Module: Implement Microsoft Entra Identity Protection - Detect risks section</reference>
+        </card>
+        
+        <card id="10" category="identity-protection">
+            <front>How can Identity Protection risks be automatically remediated?</front>
+            <back>Through risk-based Conditional Access policies that require access controls like strong authentication, multifactor authentication, or secure password reset based on detected risk level</back>
+            <reference>AZ-500 Module: Implement Microsoft Entra Identity Protection - Automatic remediation section</reference>
+        </card>
+        
+        <!-- PIM Configuration Cards -->
+        <card id="11" category="pim">
+            <front>What are the two types of PIM role assignments?</front>
+            <back>Eligible assignments (require the member to perform an action to use the role) and Active assignments (permanent access)</back>
+            <reference>AZ-500 Module: Role assignment overview - The assignment process section</reference>
+        </card>
+        
+        <card id="12" category="pim">
+            <front>What are the four possible types of PIM assignments based on time bounds?</front>
+            <back>Permanent eligible, Permanent active, Time-bound eligible (with start/end dates), Time-bound active (with start/end dates)</back>
+            <reference>AZ-500 Module: Type of assignments section</reference>
+        </card>
+        
+        <card id="13" category="pim">
+            <front>Which roles can manage PIM assignments for Microsoft Entra roles?</front>
+            <back>Privileged Role Administrator or Global Administrator (Global Admin, Security Admin, Global Reader, Security Reader can view assignments)</back>
+            <reference>AZ-500 Module: Configure Privileged Identity Management - permissions section</reference>
+        </card>
+        
+        <card id="14" category="pim">
+            <front>What is the maximum number of role-assignable groups that can be created in a single Microsoft Entra organization?</front>
+            <back>500 role-assignable groups maximum</back>
+            <reference>AZ-500 Module: Assign eligibility for PIM for Groups section</reference>
+        </card>
+        
+        <card id="15" category="pim">
+            <front>What approval is required when PIM group assignments near expiration?</front>
+            <back>Group owner approval for extend or renew operations</back>
+            <reference>AZ-500 Module: Assign eligibility for PIM for Groups section</reference>
+        </card>
+        
+        <card id="16" category="pim">
+            <front>How long can PIM audit history be viewed for assignments and activations?</front>
+            <back>Past 30 days for PIM for Groups, Microsoft Entra roles, and Azure resource roles</back>
+            <reference>AZ-500 Module: View audit history for PIM for Groups section</reference>
+        </card>
+        
+        <!-- Microsoft Entra Connect Cards -->
+        <card id="17" category="hybrid-identity">
+            <front>What are the three main authentication methods provided by Microsoft Entra Connect?</front>
+            <back>1) Password hash synchronization - syncs password hash with Entra ID, 2) Pass-through authentication - same password on-premises and cloud, 3) Federation - federated environment</back>
+            <reference>AZ-500 Module: Microsoft Entra Connect features section</reference>
+        </card>
+        
+        <!-- External Identities Cards -->
+        <card id="18" category="external-identities">
+            <front>How do Conditional Access policies apply to external B2B collaboration users?</front>
+            <back>Organizations can enforce Conditional Access policies for external B2B users in the same way as full-time employees and members. For cross-tenant scenarios, MFA and device compliance claims can be trusted from external user's home organization</back>
+            <reference>AZ-500 Module: Conditional Access section under External Identities</reference>
+        </card>
+        
+        <card id="19" category="external-identities">
+            <front>What service enables seamless collaboration in multitenant organizations?</front>
+            <back>Cross-tenant synchronization - a one-way synchronization service in Microsoft Entra ID that improves user experience without requiring invitation emails and consent prompts</back>
+            <reference>AZ-500 Module: Multitenant applications section</reference>
+        </card>
+        
+        <card id="20" category="external-identities">
+            <front>What protocol does PIM for Groups use when configured for app provisioning?</front>
+            <back>System for Cross-Domain Identity Management (SCIM) protocol - activation of group membership triggers provisioning to the application</back>
+            <reference>AZ-500 Module: Understand PIM - PIM for Groups section</reference>
+        </card>
+        
+        <!-- MFA and Authentication Cards -->
+        <card id="21" category="authentication">
+            <front>What happens when a user reports a multifactor authentication prompt as suspicious?</front>
+            <back>Users are set to High User Risk and administrators can use risk-based policies to limit access or enable self-service password reset (SSPR) for users to remediate problems</back>
+            <reference>AZ-500 Module: View suspicious activity events section</reference>
+        </card>
+        
+        <card id="22" category="authentication">
+            <front>Where do fraud reports appear in Microsoft Entra monitoring?</front>
+            <back>Three locations: Sign-ins report (as rejected by user), Audit logs (Activity type: Fraud reported), Risk detections report (Detection Type: User Reported Suspicious Activity, Risk level High)</back>
+            <reference>AZ-500 Module: View suspicious activity events section</reference>
+        </card>
+        
+        <!-- Role-Based Access Control Cards -->
+        <card id="23" category="rbac">
+            <front>What is the difference between Microsoft Entra roles and Azure roles?</front>
+            <back>Microsoft Entra roles control access to Entra resources (users, groups, applications) using Microsoft Graph API. Azure roles control access to Azure resources (VMs, storage) using Azure Resource Management</back>
+            <reference>AZ-500 Module: Microsoft Entra role-based access control section</reference>
+        </card>
+        
+        <card id="24" category="rbac">
+            <front>What are the recommended permanent role assignments according to PIM best practices?</front>
+            <back>Keep zero permanently active assignments for roles other than the recommended two break-glass emergency access accounts, which should have the permanent Global Administrator role</back>
+            <reference>AZ-500 Module: Type of assignments section</reference>
+        </card>
+        
+        <!-- Security Benchmarks Cards -->
+        <card id="25" category="security-benchmarks">
+            <front>According to the Microsoft cloud security benchmark IM-1, what should organizations use for identity and authentication?</front>
+            <back>A centralized identity and authentication system to govern organization's identities and authentications for cloud and non-cloud resources. Microsoft Entra ID is Azure's identity and authentication management service</back>
+            <reference>AZ-500 Module: IM-1 Use centralized identity and authentication system section</reference>
+        </card>
+        
+        <card id="26" category="security-benchmarks">
+            <front>What guidance does security benchmark IM-5 provide for application access?</front>
+            <back>Use single sign-on (SSO) to simplify user experience for authenticating to resources including applications and data across cloud services and on-premises environments using Microsoft Entra ID</back>
+            <reference>AZ-500 Module: IM-5 Use single sign-on (SSO) for application access section</reference>
+        </card>
+        
+        <!-- Privileged Access Management Cards -->
+        <card id="27" category="privileged-access">
+            <front>What are the key PIM features for mitigating access risks?</front>
+            <back>Time-based and approval-based role activation, just-in-time privileged access, time-bound access using start/end dates, require approval and MFA to activate roles, justification requirements, notifications, access reviews, audit history download</back>
+            <reference>AZ-500 Module: Configure Privileged Identity Management - key features list</reference>
+        </card>
+        
+        <card id="28" category="privileged-access">
+            <front>What three types of resources can PIM be used with today?</front>
+            <back>1) Microsoft Entra roles (directory roles for Entra ID and Microsoft 365), 2) Azure roles (RBAC roles for Azure resources), 3) PIM for Groups (just-in-time access to security group member/owner roles)</back>
+            <reference>AZ-500 Module: Understand PIM section</reference>
+        </card>
+        
+        <!-- Best Practices and Planning Cards -->
+        <card id="29" category="best-practices">
+            <front>What is the principle that should guide PIM role assignments?</front>
+            <back>Principle of least privilege - assign users the role with the least privileges necessary to perform their tasks, minimizing Global Administrators and using specific administrator roles for scenarios</back>
+            <reference>AZ-500 Module: Principle of least privilege section</reference>
+        </card>
+        
+        <card id="30" category="best-practices">
+            <front>What are the key steps for planning a PIM pilot deployment?</front>
+            <back>Start with small set of users (pilot group), verify PIM behaves as expected, verify all role/PIM for Groups configuration works correctly, roll to production only after thorough testing</back>
+            <reference>AZ-500 Module: Plan a pilot section</reference>
+        </card>
+        
+        <!-- Advanced Features Cards -->
+        <card id="31" category="advanced-features">
+            <front>What are the two options available when a PIM role assignment nears or reaches expiration?</front>
+            <back>Extend (when assignment nears expiration) or Renew (when assignment has already expired). Both require approval from Global Administrator or Privileged Role Administrator</back>
+            <reference>AZ-500 Module: Extend and renew assignments section</reference>
+        </card>
+        
+        <card id="32" category="advanced-features">
+            <front>What APIs are available for programmatic use of Privileged Identity Management?</front>
+            <back>Microsoft Graph APIs including PIM for Microsoft Entra roles APIs and PIM for groups APIs</back>
+            <reference>AZ-500 Module: Microsoft Graph APIs section</reference>
+        </card>
+        
+        <card id="33" category="advanced-features">
+            <front>What are the three main scenarios that Privileged Identity Management supports?</front>
+            <back>1) Privileged Role Administrator permissions (enable approval, specify approvers, view history), 2) Approver permissions (view/approve/reject requests), 3) Eligible role user permissions (request activation, view status, complete tasks)</back>
+            <reference>AZ-500 Module: Scenarios section</reference>
+        </card>
+        
+    </deck>
+</flashcards>
